@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>IMC</title>
+</head>
+
+<body class="bg-dark">
+  <div class="mt-4">
+    <img class="rounded mx-auto d-block m-2" src="https://p5y7s8q3.rocketcdn.me/wp-content/uploads/2020/07/blog_IMC.jpg" alt="">
+  </div>
+  <div class="container mt-2 bg">
+    <h1 class="text-dark text-center m-5">Calculadora IMC - Índice de Masa Corporal.</h1>
+    <form id="formulario" class="was-validated">
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Nombre De la Persona" id="nombre"
+          aria-describedby="emailHelp" required>
+        <div id="emailHelp" class="form-text"></div>
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Edad" id="edad" aria-describedby="emailHelp" required>
+        <div id="emailHelp" class="form-text"></div>
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Peso" id="peso" aria-describedby="emailHelp" required>
+        <div id="emailHelp" class="form-text"></div>
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Altura" id="altura" aria-describedby="emailHelp" required>
+        <div id="emailHelp" class="form-text"></div>
+      </div>
+
+      <div class="mb-3">
+        <select class="form-select" id="genero" required aria-label="select example">
+          <option value="">Genero</option>
+          <option id="h" value="h">Hombre</option>
+          <option id="m" value="m">Mujer</option>
+          <div class="invalid-feedback">Por Favor Elija un Genero</div>
+        </select>
+      </div>
+
+      <div class="d-flex justify-content-center m-3 ">
+        <button type="submit" class="btn btn-dark m-2 ">CALCULAR IMC</button>
+      </div>
+    </form>
+
+    <div id="listaNotas" class="container mt-4 ">
+
+      <table class="table table-primary" id="tabla">
+        <thead class="thead-inverse">
+          <tr>
+            <th scope="col">Edad</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Peso</th>
+            <th scope="col">Altura</th>
+            <th scope="col">IMC</th>
+            <th scope="col">Categoria</th>
+          </tr>
+        </thead>
+        <tbody> </tbody>
+      </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
