@@ -16,7 +16,8 @@
 
 <body class="bg-dark">
   <div class="mt-4">
-    <img class="rounded mx-auto d-block m-2 border-0" src="https://p5y7s8q3.rocketcdn.me/wp-content/uploads/2020/07/blog_IMC.jpg" alt="">
+    <img class="rounded mx-auto d-block m-2 border-0"
+      src="https://p5y7s8q3.rocketcdn.me/wp-content/uploads/2020/07/blog_IMC.jpg" alt="">
   </div>
   <div class="container mt-2 bg">
     <h1 class="text-dark text-center m-5">Calculadora IMC - Índice de Masa Corporal.</h1>
@@ -47,13 +48,22 @@
           <div class="invalid-feedback">Por Favor Elija un Genero</div>
         </select>
       </div>
-
-      <div class="d-flex justify-content-center m-3 ">
-        <button type="submit" class="btn btn-dark m-2 ">CALCULAR IMC</button>
-      </div>
+      <table class="calculadora">
+        <div class="d-flex justify-content-center m-3 ">
+          <button type="submit" class="btn btn-dark m-2 ">CALCULAR IMC</button>
+          <tr>
+            <td colspan="4"><span id="resultado"> </span></td>
+          </tr>
+        </div>
+      </table>
     </form>
 
-    <div id="listaNotas" class="container mt-4 ">
+  </div>
+  <div class="">
+    <canvas id="myChart" width="400" height="100"></canvas>
+  </div>
+
+  <!-- <div id="listaNotas" class="container mt-4 ">
 
       <table class="table table-primary" id="tabla">
         <thead >
@@ -68,8 +78,10 @@
         </thead>
         <tbody id="table"> </tbody>
       </table>
-    </div>
-    <script src="index.js"></script>
+    </div> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.js"></script>
+  <script src="index.js" type="module"></script>
+  <script src="./data/data.js" type="module"></script>
 </body>
 
 </html>
